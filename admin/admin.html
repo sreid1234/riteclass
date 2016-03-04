@@ -1,0 +1,160 @@
+<div class="content">
+    <section id="login" class="section2">
+        <div class="form-layout" ng-app="app.AdminForm" ng-controller="AdminCtrl as Login">
+            <div class="login-form">
+                <h2>
+                    Login
+                </h2>
+
+                <form name="loginForm" novalidate>
+                    <div class="input-field" ng-class="{active : Login.isLabelActive(loginForm.email)}">
+                        <label>
+                            E-mail
+                        </label>
+
+                        <input type="email" name="email" ng-blur="Login.blurInput(loginForm.email)" ng-focus="Login.focusInput(loginForm.email)" ng-model="Login.user.email" class="form-control" ng-class="{'is-dirty' : Login.isDirty(loginForm.email)}" required autofocus />
+                    </div>
+
+                    <div class="input-field" ng-class="{active : Login.isLabelActive(loginForm.password)}">
+                        <label>
+                            Password
+                        </label>
+
+                        <input type="password" name="password" ng-blur="Login.blurInput(loginForm.password)" ng-focus="Login.focusInput(loginForm.password)" ng-model="Login.user.password" ng-maxlength="30" ng-minlength="6" class="form-control" ng-class="{'is-dirty' : Login.isDirty(loginForm.password)}" required />
+                    </div>
+
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="Login.submit()" ng-disabled="Login.isFormInvalid(loginForm)">
+                        Log In
+                    </button>
+                </form>
+            </div>
+
+            <!--<div ng-if="Login.success">-->
+                <div class="classes">
+                    <h1>Spring Semester 2016</h1>
+                    <div class="search">
+                        <input type="search" class="search-box" />
+                          <span class="search-button">
+                            <span class="search-icon"></span>
+                          </span>
+                    </div>
+                    <div  class="tbl-header">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th># of Spots</th>
+                                <th>CRN</th>
+                                <th>Professor</th>
+                                <th>Pref A</th>
+                                <th>Pref B</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div  class="tbl-content">
+                        <form>
+                            <table cellpadding="0" cellspacing="0" border="0">
+                                <tbody>
+                                <tr>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                </tr><tr>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                </tr><tr>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td><input class="admin-input" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                    <td class="radio"><input type="radio" /></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+
+                    </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+
+    $('button').click(function() {
+        $('.login-form').css('display', 'none');
+        $('.classes').css('display','block');
+    });
+</script>
+
+<script>
+    $('.search-button').click(function(){
+        $(this).parent().toggleClass('open');
+    });
+</script>
